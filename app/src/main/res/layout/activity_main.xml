@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:background="@color/colorWhite"
+            android:backgroundTint="@color/colorWhite"
+            app:cardCornerRadius="20dp">
+
+            <android.widget.SearchView
+                android:id="@+id/searchView"
+                style="@style/SearchViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:iconifiedByDefault="false"
+                android:queryHint="@string/search_bar_default_text"
+                android:searchIcon="@drawable/ic_search_small" />
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/searchingProgressBar"
+            style="@style/ProgressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorAccent"
+            android:indeterminateTintMode="src_atop"
+            tools:visibility="invisible" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGray">
+
+    </FrameLayout>
+
+</LinearLayout>
